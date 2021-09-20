@@ -3,3 +3,33 @@
 }
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Reference https://www.codegrepper.com/code-examples/javascript/javascript+detect+mobile+or+tablet -->
+<!-- Reference https://tutorial.eyehunts.com/js/javascript-detect-mobile-or-tablet-html-example-code/ -->
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        alert(checkMobile());
+    });
+
+    function checkMobile() {
+
+        //Check Device
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+            //Check Tablet
+            if (/(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i.test(navigator.userAgent)) {
+                return "Tablet";
+            }
+            else {
+                return "Mobile";
+            }
+        }
+        else {
+            return "Desktop";
+        }
+
+    }
+
+</script>
